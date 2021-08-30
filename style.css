@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Alata", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+}
+
+.herosection {
+    background: url(/images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 43.3rem;
+    padding-top: 2.67rem;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: transparent;
+}
+
+.herobefore {
+    max-width: 43.3rem;
+    padding: 2.67rem 2.67rem 2rem;
+    margin-top: 8.67rem;
+    font-size: 2.8rem;
+    margin-left: 2em;
+}
+
+.herobefore-text {
+    border: 2px solid #ffff;
+    padding: 2rem;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+    font-size: 12px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    display: block;
+    background-color: #fff;
+    margin-bottom: 0px;
+}
+
+.nav__links a:hover::after {
+    width: 100%;
+    transition: all .5s;
+}
+
+.overlay__content a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    display: block;
+    background-color: #fff;
+    margin-bottom: 0px;
+}
+
+.overlay__content a:hover::after {
+    width: 25%;
+    transition: all .5s;
+}
+
+
+/* Mobile Nav */
+
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-size: 1.6rem;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
+    color: #edf0f1;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+}
+
+p {
+    font-size: 15px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.fa,
+.fas {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
