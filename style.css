@@ -211,6 +211,8 @@ p {
 .attribution {
     font-size: 11px;
     text-align: center;
+    background-color: #000;
+    color: #fff;
 }
 
 .attribution a {
@@ -557,9 +559,9 @@ p {
     .carrertwo img {
         width: 100%;
     }
-    .cr-btn-mobile {
+    /* .cr-btn-mobile {
         display: none;
-    }
+    } */
 }
 
 @media (min-width: 1025px) {
